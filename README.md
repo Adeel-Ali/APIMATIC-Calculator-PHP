@@ -119,25 +119,28 @@ $client = new APIMATICCalculatorClient();
 
 ### <a name="list_of_controllers"></a>List of Controllers
 
-* [SimpleCalculatorController](#simple_calculator_controller)
+* [OperationController](#operation_controller)
 
-### <a name="simple_calculator_controller"></a>![Class: ](http://apidocs.io/img/class.png ".SimpleCalculatorController") SimpleCalculatorController
+### <a name="operation_controller"></a>![Class: ](http://apidocs.io/img/class.png ".OperationController") OperationController
 
 #### Get singleton instance
 
-The singleton instance of the ``` SimpleCalculatorController ``` class can be accessed from the API Client.
+The singleton instance of the ``` OperationController ``` class can be accessed from the API Client.
 
 ```php
-$simpleCalculator = $client->getSimpleCalculator();
+$operation = $client->getOperation();
 ```
 
-#### <a name="get_calculate"></a>![Method: ](http://apidocs.io/img/method.png ".SimpleCalculatorController.getCalculate") getCalculate
+#### <a name="get_calculate"></a>![Method: ](http://apidocs.io/img/method.png ".OperationController.getCalculate") getCalculate
 
 > Calculates the expression using the specified operation.
 
 
 ```php
-function getCalculate($options)
+function getCalculate(
+        $operation,
+        $x,
+        $y)
 ```
 
 #### Parameters
@@ -154,16 +157,10 @@ function getCalculate($options)
 
 ```php
 $operation = string::SUM;
-$collect['operation'] = $operation;
+$x = 2.0;
+$y = 5.0;
 
-$x = 5;
-$collect['x'] = $x;
-
-$y = 6;
-$collect['y'] = $y;
-
-
-$result = $simpleCalculator->getCalculate($collect);
+$result = $operation->getCalculate($operation, $x, $y);
 
 ```
 
