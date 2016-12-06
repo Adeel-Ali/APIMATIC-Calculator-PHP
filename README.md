@@ -158,7 +158,7 @@ function getCalculate(
 ```php
 $operation = string::SUM;
 $x = 2.0;
-$y = 5.0;
+$y = 3.0;
 
 $result = $operation->getCalculate($operation, $x, $y);
 

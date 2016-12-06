@@ -1,7 +1,7 @@
 {
     "name": "apimatic/apimaticcalculator",
     "type": "library",
-    "description": "TODO: Add a description",
+    "description": "Simple calculator API hosted on APIMATIC",
     "keywords": ["APIMATIC Calculator","API","SDK"],
     "homepage": "https://apimatic.io",
     "license": "MIT",
