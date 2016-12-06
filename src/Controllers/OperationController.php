@@ -46,7 +46,7 @@ class OperationController extends BaseController {
      * @param  string     $operation     Required parameter: The operator to apply on the variables
      * @param  double     $x             Required parameter: The LHS value
      * @param  double     $y             Required parameter: The RHS value
-     * @return mixed response from the API call
+     * @return double response from the API call
      * @throws APIException Thrown if API call fails
      */
     public function getCalculate (
@@ -76,8 +76,7 @@ class OperationController extends BaseController {
 
         //prepare headers
         $_headers = array (
-            'user-agent'    => 'APIMATIC 2.0',
-            'Accept'        => 'application/json'
+            'user-agent'    => 'APIMATIC 2.0'
         );
 
         //call on-before Http callback
